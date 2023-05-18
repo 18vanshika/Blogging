@@ -1,0 +1,24 @@
+<nav class="navbar border-bottom navbar-expand-lg py-1" style="background-color: #e5bcef;">
+  <div class="container-fluid">
+    <nav class="navbar" style="background-color: #e5beef;">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/static/images/mylogo1.png" class="rounded-circle" alt="Bootstrap" width="50" height="40">
+          {{data.brandName}}
+        </a>
+      </div>
+    </nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-3">
+        {{#each data.links}}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{this.url}}">{{this.label}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</nav>
